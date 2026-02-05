@@ -1,7 +1,7 @@
 let arr = [5, 4, 9, 1, 0];
-let n = arr.length;
 
 function bubbleSort(arr) {
+  let n = arr.length;
   for (let i = 0; i < n - 1; i++) {
     let isSwapped = false;
 
