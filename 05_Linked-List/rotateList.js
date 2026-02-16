@@ -28,3 +28,4 @@ function rotateListKTimes(head, k) {
   slow.next = null;
   return headNode;
 }
+// Time Complexity - O(n), Space COmplexity - O(1)
