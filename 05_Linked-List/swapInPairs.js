@@ -27,3 +27,16 @@ function swapNodesInPairs(head) {
 
   return dummyNode.next;
 }
+
+// Approach - 2 using recursion
+
+function swap(head) {
+  if (!head || !head.next) return head;
+
+  let l = head;
+  let r = head.next;
+
+  l.next = swap(r.next);
+  r.next = l;
+  return r;
+}
