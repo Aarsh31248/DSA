@@ -8,7 +8,7 @@ function lengthOfLastWord(str) {
 }
 console.log(lengthOfLastWord(str));
 
-// Approach - 2, using 2 while loops, , Time = O(n), Space = O(1) 
+// Approach - 2, using 2 while loops, , Time = O(n), Space = O(1)
 function lengthOfLastWord2(str) {
   // Trim the spaces
   let n = str.length - 1;
@@ -29,3 +29,18 @@ function lengthOfLastWord2(str) {
 }
 console.log(lengthOfLastWord2(str));
 
+// Approach - 3, using 1 while loop, Time = O(n), Space = O(1)
+function lengthOfLastWord3(str) {
+  let n = str.length - 1;
+  let count = 0;
+  while (n >= 0) {
+    if (str[n] !== " ") {
+      count++;
+    } else if (count > 0) {
+      break;
+    }
+    n--;
+  }
+  return count;
+}
+console.log(lengthOfLastWord3(str));
