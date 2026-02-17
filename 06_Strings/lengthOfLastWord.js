@@ -1,6 +1,6 @@
 let str = "     fly   me to the moon   ";
 
-// Approach - 1, using In-built function
+// Approach - 1, using In-built function, Time = O(n), Space = O(n)
 function lengthOfLastWord(str) {
   let words = str.trim().split(" ");
   words = words[words.length - 1];
@@ -8,7 +8,7 @@ function lengthOfLastWord(str) {
 }
 console.log(lengthOfLastWord(str));
 
-// Approach - 2, using 2 while loops
+// Approach - 2, using 2 while loops, , Time = O(n), Space = O(1) 
 function lengthOfLastWord2(str) {
   // Trim the spaces
   let n = str.length - 1;
@@ -28,3 +28,4 @@ function lengthOfLastWord2(str) {
   return count;
 }
 console.log(lengthOfLastWord2(str));
+
