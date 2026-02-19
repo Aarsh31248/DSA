@@ -19,7 +19,25 @@ MyQueue.prototype.pop = function () {
   }
 };
 
+MyQueue.prototype.top = function () {
+  if (this.s2.length !== 0) {
+    return this.s2[this.s2.length - 1];
+  } else {
+    let n = this.s1.length;
+    for (let i = 0; i < n; i++) {
+      this.s2.push(this.s1.pop());
+    }
+    return this.s2[this.s2.length - 1];
+  }
+};
 
+MyQueue.prototype.empty = function () {
+  if (this.s2.length == 0 && this.s1.length == 0) {
+    return true;
+  } else {
+    return false;
+  }
+};
 
 let queue = new MyQueue();
 queue.push(1);
@@ -32,6 +50,10 @@ console.log(queue);
 let pop = queue.pop();
 console.log(pop);
 
+let top = queue.top();
+console.log(top);
 
+let empty = queue.empty();
+console.log(empty);
 
 console.log(queue);
