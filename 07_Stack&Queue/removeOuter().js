@@ -21,3 +21,21 @@ function removeOuterParentheses(s) {
   return ans;
 }
 console.log(removeOuterParentheses(s));
+
+// Approach - 2, without using stack, Time = O(n) Space = O(1)
+function removeOuterParentheses2(s) {
+  let level = 0;
+  let ans = "";
+
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === "(") {
+      level++;
+      if (level > 1) ans += s[i];
+    } else {
+      if (level > 1) ans += s[i];
+      level--;
+    }
+  }
+  return ans;
+}
+console.log(removeOuterParentheses2(s));
