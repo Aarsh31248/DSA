@@ -33,7 +33,7 @@ function removeOuterParentheses2(s) {
       if (level > 1) ans = ans + s[i];
     } else {
       if (level > 1) ans = ans + s[i];
-      level--;
+      level--
     }
   }
   return ans;
