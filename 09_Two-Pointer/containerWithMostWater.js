@@ -1,0 +1,21 @@
+let arr = [1, 8, 6, 2, 5, 4, 8, 3, 7];
+
+function containerWithMostWater(arr) {
+  let i = 0;
+  let j = arr.length - 1;
+  let maxWater = 0;
+
+  while (i < j) {
+    let area = Math.min(arr[i], arr[j]) * (j - i);
+    maxWater = Math.max(area, maxWater);
+
+    if (arr[i] < arr[j]) {
+      i++;
+    } else {
+      j--;
+    }
+  }
+  return maxWater;
+}
+console.log(containerWithMostWater(arr));
+// Time - O(n), Space - O(1)
